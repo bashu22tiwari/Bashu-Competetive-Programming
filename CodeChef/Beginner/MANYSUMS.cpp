@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    long int T,L,R,num,a;
+    long long int T,L,R,a;
     cin >> T ;
     
     while(T!=0){
@@ -12,9 +12,8 @@ int main()
     
     cin >> R ;
     
-    a=R-L+1;
-    num= (a*(a+1))/2;
-    cout << num << "\n";
+    a= 2*(R-L) + 1;
+    cout << a << "\n";
     
         T--;
     }
