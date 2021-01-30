@@ -1,22 +1,38 @@
 #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
     int t;
-    cin >> t ;
-    int n ;
-    while (t!=0)
+    cin >> t;
+    while(t--)
     {
-        cin >> n ;
-        if (n%2021==0 || n%2020==0 || n%4041==0)
+        int n,k;
+        int flag=1;
+        cin >> n >> k ;
+        int array[n];
+        for(int i=0 ; i<n ; i++)
+        {
+            cin >> array[i];
+        }
+
+        for(int i=0; i<n ; i++)
+        {
+            if((array[i]*10)%k != 0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1)
         {
             cout << "YES" << "\n" ;
         }
-        else{
+        else
+        {
             cout << "NO" << "\n" ;
         }
-        
-        t--;
     }
-    
+    return 0;
 }

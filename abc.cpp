@@ -1,36 +1,28 @@
 #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main()
 {
     int t;
     cin >> t;
-    while(t>0)
+    while(t--)
     {
-        int q,d;
-        cin >> q >> d ;
-        int array[q];
-        for(int i=0 ; i<q ; i++)
-        {
-            cin >> array[i];
-        }
-
-        for(int i=0 ; i<q ; i++)
-        {
-            if(array[i] >= 1 && array[i] < d)
-            {
-                cout << "NO" << "\n";
-            }
-            else if(array[i] >= d && array[i]%7==4)
-            {
-                cout << "NO" << "\n" ;
-            }
-            else
-            {
-                cout << "YES" <<"\n";
-            }
-        }
-         t--;
+       int n;
+       int count=0 ;
+       cin >> n ;
+       int array[n];
+       for(int i=0; i<n ; i++)
+       {
+           cin >> array[i];
+           if(array[i]%2!=0)
+           {
+               count++;
+           }
+       }
+       if(count%2==0){ cout << "1" << "\n" ;}
+       else { cout << "2" << "\n" ;}
+        
     }
-
+    return 0;
 }
