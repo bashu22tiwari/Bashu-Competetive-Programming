@@ -15,13 +15,28 @@ int main()
        for(int i=0; i<n ; i++)
        {
            cin >> array[i];
+       }
+       for(int i=0; i<n ; i++)
+       {
            if(array[i]%2!=0)
            {
                count++;
            }
        }
-       if(count%2==0){ cout << "1" << "\n" ;}
-       else { cout << "2" << "\n" ;}
+
+       if(count==n)
+       {
+           cout << "0" << "\n" ;
+       }
+       else if(count>=0 && count != n)
+       {
+           cout << count << "\n";
+       }
+       else
+       {
+           cout << "0" << "\n";
+       }
+       
         
     }
     return 0;
