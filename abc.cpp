@@ -9,7 +9,7 @@ int main()
     while(t--)
     {
        int n;
-       int count=0 ;
+       int odd=0, even=0;
        cin >> n ;
        int array[n];
        for(int i=0; i<n ; i++)
@@ -20,17 +20,29 @@ int main()
        {
            if(array[i]%2!=0)
            {
-               count++;
+               odd++;
+           }
+           else
+           {
+               even++;
            }
        }
 
-       if(count==n)
+       if(odd==n)
        {
            cout << "0" << "\n" ;
        }
-       else if(count>=0 && count != n)
+       else if(odd>=0 && odd!=n && odd<even)
        {
-           cout << count << "\n";
+           cout << odd << "\n";
+       }
+       else if(even>=0 && even!=n && even<odd)
+       {
+           cout << even << "\n";
+       }
+       else if(even==odd)
+       {
+           cout << even << "\n";
        }
        else
        {
