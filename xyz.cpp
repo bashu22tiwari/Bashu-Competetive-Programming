@@ -4,35 +4,17 @@ using namespace std;
 
 int main()
 {
-    int t;
-    cin >> t;
-    while(t--)
+    int n;
+    cin >> n ;
+    int divisor;
+    for(int i=1; i<=10 ; i++)
     {
-        int n,k;
-        int flag=1;
-        cin >> n >> k ;
-        int array[n];
-        for(int i=0 ; i<n ; i++)
+        if(n%i==0)
         {
-            cin >> array[i];
-        }
-
-        for(int i=0; i<n ; i++)
-        {
-            if((array[i]*10)%k != 0)
-            {
-                flag=0;
-                break;
-            }
-        }
-        if(flag==1)
-        {
-            cout << "YES" << "\n" ;
-        }
-        else
-        {
-            cout << "NO" << "\n" ;
+            divisor=i;
         }
     }
-    return 0;
+    cout << divisor ;
 }
+
+
