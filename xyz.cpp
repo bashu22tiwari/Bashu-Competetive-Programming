@@ -33,18 +33,21 @@ int main()
         }
         for(int i=0 ; i<n-2 ; i++)
         {
-            int a, b, c;
-            a= array[i];
-            b= array[i+1];
-            c= array[i+2];
-            d = diff(a,b) + diff(b,c) + diff(a,c);
-            if(d>max)
+            for (int j=1; j<n-1; j++)
             {
-                max=d;
+                for(int k=2 ; k<n ; k++)
+                {
+                    d = diff(array[i],array[j]) + diff(array[j],array[k]) + diff(array[i],array[k]);
+                    if(d>max)
+                    {
+                        max=d;
+                    }
+
+                }
             }
+            
         }
     cout << max << "\n" ;
     }
 }
-
 
