@@ -1,20 +1,50 @@
 #include <bits/stdc++.h>
-#include <iostream>
 using namespace std;
+
+int diff(int x, int y)
+{
+    if(x>y)
+    {
+        return x-y ;
+    }
+    else if(y>x)
+    {
+        return y-x ;
+    }
+    else
+    {
+        return 0;
+    }
+}
 
 int main()
 {
-    int n;
-    cin >> n ;
-    int divisor;
-    for(int i=1; i<=10 ; i++)
+    int t;
+    cin >> t ;
+    while(t--)
     {
-        if(n%i==0)
+        int n;
+        cin >> n ;
+        int d, max=0;
+        int array[n];
+        for(int i=0 ; i<n ; i++)
         {
-            divisor=i;
+            cin >> array[i];
         }
+        for(int i=0 ; i<n-2 ; i++)
+        {
+            int a, b, c;
+            a= array[i];
+            b= array[i+1];
+            c= array[i+2];
+            d = diff(a,b) + diff(b,c) + diff(a,c);
+            if(d>max)
+            {
+                max=d;
+            }
+        }
+    cout << max << "\n" ;
     }
-    cout << divisor ;
 }
 
 
