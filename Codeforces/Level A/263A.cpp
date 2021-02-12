@@ -1,37 +1,32 @@
 #include <bits/stdc++.h>
+#include <cstdlib>
 using namespace std;
 
 int main()
 {
     int array[5][5];
-    for(int i=1 ; i<=5 ; i++)
+    int a,b ;
+    for(int i=0;i<5;i++)
     {
-        for(int j=1 ; j<=5 ; j++)
+        for(int j=0; j<5 ; j++)
         {
             cin >> array[i][j];
         }
     }
-
-    int a,b;
-
-    for(int i=1 ; i<=5 ; i++)
+    
+    for(int i=0;i<5;i++)
     {
-        for(int j=1 ; j<=5 ; j++)
+        for(int j=0; j<5 ; j++)
         {
             if(array[i][j]==1)
             {
-                a=i;
-                b=j;
+                a=abs(i-2);
+                b=abs(j-2);
                 break;
             }
         }
     }
-
-    cout << a << b ;
-
-    return 0;
-
-    cout << "dxgfcgvhbj" ;
-
+    
+    cout << a+b ;
 
 }
