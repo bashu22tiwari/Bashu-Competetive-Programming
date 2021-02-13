@@ -1,21 +1,8 @@
 #include <bits/stdc++.h>
+#include <cstdlib>
+#include <algorithm>
+#include <cstring>
 using namespace std;
-
-int diff(int x, int y)
-{
-    if(x>y)
-    {
-        return x-y ;
-    }
-    else if(y>x)
-    {
-        return y-x ;
-    }
-    else
-    {
-        return 0;
-    }
-}
 
 int main()
 {
@@ -37,7 +24,7 @@ int main()
             {
                 for(int k=2 ; k<n ; k++)
                 {
-                    d = diff(array[i],array[j]) + diff(array[j],array[k]) + diff(array[i],array[k]);
+                    d = abs(array[i]-array[j]) + abs(array[j]-array[k]) + abs(array[i]-array[k]);
                     if(d>max)
                     {
                         max=d;
